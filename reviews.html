@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Shorts - Reviews</title>
+  <link rel="shortcut icon" href="Favicon.png" type="image/png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/p5.js"></script>
+  <script src="js/topology.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/pricing.js" async></script>
+  <script src="js/nav.js" defer></script>
+  <style>
+    body {
+      overflow: hidden;
+      height: 100vh;
+	  display: grid;
+	  justify-content: center;
+	  align-items: center;
+    }
+    .gradient-text {
+      font-size: 3vw;
+    }
+    .subtitle {
+      font-size: 1.5vw;
+    }
+  </style>
+</head>
+<body>
+    <a id="prevPg" href="pricing.html">prev</a>
+    <a id="nextPg" href="team.html">next</a>
+    <div id="topology"></div>
+    <div class="brand-logo">
+    <img src="Animation Shorts Logo for web.png" alt="Logo">
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+    <label id="bubble-label">
+        <input class="bubble" type="checkbox" id="menu-checkbox" name="dummy" value="on">
+        <span class="hamburger-icon"></span>
+    </label>
+    </div>
+    <!-- Navigation Panel -->
+    <nav class="nav" id="nav">
+    <ul>
+        <li><a href="index.html" data-text="Home">Home</a></li>
+        <li><a href="why-here.html" data-text="About">About Us</a></li>
+        <li><a href="logo.html" data-text="Logos">Logos</a></li>
+        <li><a href="videos.html" data-text="Videos">Videos</a></li>
+        <li><a href="websites.html" data-text="Websites">Websites</a></li>
+        <li><a href="services.html" data-text="Services">Services</a></li>
+        <li><a href="pricing.html" data-text="Pricing">Pricing</a></li>
+        <li><a href="reviews.html" data-text="Reviews">Reviews</a></li>
+        <li><a href="team.html" data-text="Team">Team</a></li>
+        <li><a href="contact.html" data-text="Contact">Contact</a></li>
+    </ul>
+    </nav>
+    <div class="social_links">
+        <a href="https://www.instagram.com/animation_shorts1/" target="_blank">
+        <span class="fa-stack fa-lg ig combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+        <a href="https://www.facebook.com/animationshorts.co.uk/" target="_blank">
+        <span class="fa-stack fa-lg fb combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+        <a href="https://youtube.com/channel/UCKpNv2y8CS-G0z7Ar-LCGEg/" target="_blank">
+        <span class="fa-stack fa-lg yt combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-youtube-play fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+    </div>
+    <div class="title-container">
+        <h1 class="gradient-text">Reviews</h1>
+    </div>
+    <!-- --------------------------------------- -->
+    <div class="container mx-auto max-w-7xl group">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div class="overflow-hidden h-[40rem] rounded-3xl [mask-image:linear-gradient(to_bottom,transparent,white_20%,white_80%,transparent)] md:col-span-1 lg:col-span-1">
+                <div class="flex flex-col gap-6 group-hover-pause animate-scroll-t2b">
+                    <div class="flex flex-col gap-6">
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">😀</span>
+                                <div>
+                                    <p class="font-semibold text-white">Alex R.</p>
+                                    <p class="text-sm text-gray-500">Entrepreneur</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"This platform is a game-changer for my business. The intuitive interface and powerful features have saved me countless hours. Highly recommend!"</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🚀</span>
+                                <div>
+                                    <p class="font-semibold text-white">Sarah W.</p>
+                                    <p class="text-sm text-gray-500">Freelance Designer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"I've never used a tool that integrates so seamlessly with my workflow. It's fast, reliable, and the customer support is top-notch."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🤩</span>
+                                <div>
+                                    <p class="font-semibold text-white">Michael B.</p>
+                                    <p class="text-sm text-gray-500">Startup Founder</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The insights I've gained from this service are invaluable. It has given me a competitive edge and allowed me to grow my business faster than I thought possible."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">😊</span>
+                                <div>
+                                    <p class="font-semibold text-white">Jessica L.</p>
+                                    <p class="text-sm text-gray-500">Marketer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"A truly fantastic tool. It's user-friendly and the results speak for themselves. I can't imagine working without it now."</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">😀</span>
+                                <div>
+                                    <p class="font-semibold text-white">Alex R.</p>
+                                    <p class="text-sm text-gray-500">Entrepreneur</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"This platform is a game-changer for my business. The intuitive interface and powerful features have saved me countless hours. Highly recommend!"</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🚀</span>
+                                <div>
+                                    <p class="font-semibold text-white">Sarah W.</p>
+                                    <p class="text-sm text-gray-500">Freelance Designer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"I've never used a tool that integrates so seamlessly with my workflow. It's fast, reliable, and the customer support is top-notch."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🤩</span>
+                                <div>
+                                    <p class="font-semibold text-white">Michael B.</p>
+                                    <p class="text-sm text-gray-500">Startup Founder</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The insights I've gained from this service are invaluable. It has given me a competitive edge and allowed me to grow my business faster than I thought possible."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">😊</span>
+                                <div>
+                                    <p class="font-semibold text-white">Jessica L.</p>
+                                    <p class="text-sm text-gray-500">Marketer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"A truly fantastic tool. It's user-friendly and the results speak for themselves. I can't imagine working without it now."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block overflow-hidden h-[40rem] rounded-3xl [mask-image:linear-gradient(to_top,transparent,white_20%,white_80%,transparent)]">
+                <div class="flex flex-col gap-6 group-hover-pause animate-scroll-b2t">
+                    <div class="flex flex-col gap-6">
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🌟</span>
+                                <div>
+                                    <p class="font-semibold text-white">Chloe K.</p>
+                                    <p class="text-sm text-gray-500">Product Manager</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The most comprehensive and powerful solution I've found. It has everything our team needs to succeed."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🎉</span>
+                                <div>
+                                    <p class="font-semibold text-white">David P.</p>
+                                    <p class="text-sm text-gray-500">Marketing Lead</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"Simple to use, yet incredibly effective. We saw a significant increase in our productivity within the first month."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">✨</span>
+                                <div>
+                                    <p class="font-semibold text-white">Olivia G.</p>
+                                    <p class="text-sm text-gray-500">Creative Director</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The design and functionality are top-tier. It's a pleasure to use and has become an essential part of our daily operations."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">👍</span>
+                                <div>
+                                    <p class="font-semibold text-white">Liam F.</p>
+                                    <p class="text-sm text-gray-500">Developer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The documentation is clear and concise, and the performance is outstanding. It's the best tool in its category."</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🌟</span>
+                                <div>
+                                    <p class="font-semibold text-white">Chloe K.</p>
+                                    <p class="text-sm text-gray-500">Product Manager</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The most comprehensive and powerful solution I've found. It has everything our team needs to succeed."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🎉</span>
+                                <div>
+                                    <p class="font-semibold text-white">David P.</p>
+                                    <p class="text-sm text-gray-500">Marketing Lead</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"Simple to use, yet incredibly effective. We saw a significant increase in our productivity within the first month."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">✨</span>
+                                <div>
+                                    <p class="font-semibold text-white">Olivia G.</p>
+                                    <p class="text-sm text-gray-500">Creative Director</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The design and functionality are top-tier. It's a pleasure to use and has become an essential part of our daily operations."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">👍</span>
+                                <div>
+                                    <p class="font-semibold text-white">Liam F.</p>
+                                    <p class="text-sm text-gray-500">Developer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The documentation is clear and concise, and the performance is outstanding. It's the best tool in its category."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block overflow-hidden h-[40rem] rounded-3xl [mask-image:linear-gradient(to_bottom,transparent,white_20%,white_80%,transparent)]">
+                <div class="flex flex-col gap-6 group-hover-pause animate-scroll-t2b">
+                    <div class="flex flex-col gap-6">
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">👏</span>
+                                <div>
+                                    <p class="font-semibold text-white">Emily C.</p>
+                                    <p class="text-sm text-gray-500">UI/UX Designer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The attention to detail and clean design are what sets this apart. It's a joy to interact with every day."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">💯</span>
+                                <div>
+                                    <p class="font-semibold text-white">Ben H.</p>
+                                    <p class="text-sm text-gray-500">Business Analyst</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The data visualization tools are incredible. It has made complex data easy to understand and present to stakeholders."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">💖</span>
+                                <div>
+                                    <p class="font-semibold text-white">Sophie R.</p>
+                                    <p class="text-sm text-gray-500">Writer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"I'm able to organize my thoughts and projects much more efficiently. It's a must-have for anyone looking to boost their productivity."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🥳</span>
+                                <div>
+                                    <p class="font-semibold text-white">Jake M.</p>
+                                    <p class="text-sm text-gray-500">Consultant</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The customer support is lightning fast and incredibly helpful. I had a minor issue and it was resolved in minutes."</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-6">
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">👏</span>
+                                <div>
+                                    <p class="font-semibold text-white">Emily C.</p>
+                                    <p class="text-sm text-gray-500">UI/UX Designer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The attention to detail and clean design are what sets this apart. It's a joy to interact with every day."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">💯</span>
+                                <div>
+                                    <p class="font-semibold text-white">Ben H.</p>
+                                    <p class="text-sm text-gray-500">Business Analyst</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The data visualization tools are incredible. It has made complex data easy to understand and present to stakeholders."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">💖</span>
+                                <div>
+                                    <p class="font-semibold text-white">Sophie R.</p>
+                                    <p class="text-sm text-gray-500">Writer</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"I'm able to organize my thoughts and projects much more efficiently. It's a must-have for anyone looking to boost their productivity."</p>
+                        </div>
+                        <div class="border border-white-800 p-6 rounded-2xl shadow-lg transition-transform duration-300 transform hover:scale-105">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">🥳</span>
+                                <div>
+                                    <p class="font-semibold text-white">Jake M.</p>
+                                    <p class="text-sm text-gray-500">Consultant</p>
+                                </div>
+                            </div>
+                            <div class="text-yellow-400 mb-2">★★★★★</div>
+                            <p class="text-gray-300 italic">"The customer support is lightning fast and incredibly helpful. I had a minor issue and it was resolved in minutes."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- --------------------------------------- -->
+    <script>   
+        VANTA.TOPOLOGY({
+            el: "#topology",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffab00,
+            backgroundColor: 0x0
+        })
+
+        setupParallax('.title-container');
+    </script>
+</body>
+</html>

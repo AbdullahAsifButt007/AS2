@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Shorts - Team</title>
+  <link rel="shortcut icon" href="Favicon.png" type="image/png">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="js/r134.js"></script>
+  <script src="js/halo.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/nav.js" defer></script>
+  <style>
+    .service-card {
+      width: 80vw;
+      height: 40vw;
+      max-width: 700px;
+      max-height: 350px;
+    }
+    
+    .character {
+      filter: brightness(15%);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: .5s;
+      position: relative;
+      width: 50%;
+      height: auto;
+      transform: scale(.9);
+    }
+
+    .service-card.active .character {
+      filter: brightness(100%) drop-shadow(0 0 30px rgba(255,255,255,0.3));
+    }
+
+    .service-card.active .service-content h2,
+    .service-card.active .service-content p {
+      color: white;
+      text-shadow: none;
+      opacity: 1;
+    }
+    
+    .service-content h2,
+    .service-content p {
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transition-delay: .5s;
+      opacity: 0;
+    }
+
+    .nav-button.left-4 {
+      left: 1rem;
+    }
+    .nav-button.right-4 {
+      right: 1rem;
+    }
+    .nav-button {
+      top: 50%;
+    }
+  </style>
+</head>
+<body>
+  <a id="prevPg" href="pricing.html">prev</a>
+  <a id="nextPg" href="contact.html">next</a>
+  <div id="halo"></div>
+  <div class="brand-logo">
+    <img src="Animation Shorts Logo for web.png" alt="Logo">
+  </div>
+  <div class="menu-toggle" id="menu-toggle">
+    <label id="bubble-label">
+      <input class="bubble" type="checkbox" id="menu-checkbox" name="dummy" value="on">
+      <span class="hamburger-icon"></span>
+    </label>
+  </div>
+
+  <!-- Navigation Panel -->
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html" data-text="Home">Home</a></li>
+      <li><a href="why-here.html" data-text="About">About Us</a></li>
+      <li><a href="logo.html" data-text="Logos">Logos</a></li>
+      <li><a href="videos.html" data-text="Videos">Videos</a></li>
+      <li><a href="websites.html" data-text="Websites">Websites</a></li>
+      <li><a href="services.html" data-text="Services">Services</a></li>
+      <li><a href="pricing.html" data-text="Pricing">Pricing</a></li>
+      <li><a href="reviews.html" data-text="Reviews">Reviews</a></li>
+      <li><a href="team.html" data-text="Team">Team</a></li>
+      <li><a href="contact.html" data-text="Contact">Contact</a></li>
+    </ul>
+  </nav>
+  <audio id="slideSound" hidden>
+    <source src="slideSound.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="carousel-container relative" id="carousel">
+    <button class="nav-button left-4" id="prevBtn">
+      <i class='bx bx-chevron-left'></i>
+    </button>
+    <button class="nav-button right-4" id="nextBtn">
+      <i class='bx bx-chevron-right'></i>
+    </button>
+
+    <div class="carousel-track absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex">
+      <!-- Team Member 1 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (1).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Mo Shery</h2>
+          <p class="text-dark-200 text-lg">Director</p>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (5).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Oliver Grey</h2>
+          <p class="text-dark-200 text-lg">Managing Director</p>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (3).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Shah G</h2>
+          <p class="text-dark-200 text-lg">Senior Sales Specialist</p>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (4).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Dan</h2>
+          <p class="text-dark-200 text-lg">Lead Sales Strategist</p>
+        </div>
+      </div>
+
+      <!-- Team Member 5 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (2).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Laraib</h2>
+          <p class="text-dark-200 text-lg">Video Animator</p>
+        </div>
+      </div>
+
+      <!-- Team Member 6 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (7).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Aimu</h2>
+          <p class="text-dark-200 text-lg">Character Designer</p>
+        </div>
+      </div>
+
+      <!-- Team Member 7 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (8).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Ab</h2>
+          <p class="text-dark-200 text-lg">Senior Developer</p>
+        </div>
+      </div>
+
+      <!-- Team Member 8 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (9).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Az</h2>
+          <p class="text-dark-200 text-lg">Junior Developer</p>
+        </div>
+      </div>
+
+      <!-- Team Member 8 -->
+      <div class="service-card p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <img class="character m-auto" src="characters/char (6).png" alt="character">
+          <h2 class="text-4xl font-bold text-dark mb-4">Zafar</h2>
+          <p class="text-dark-200 text-lg">Office Assistant</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3">
+      <button class="nav-dot" data-index="0"></button>
+      <button class="nav-dot" data-index="1"></button>
+      <button class="nav-dot" data-index="2"></button>
+      <button class="nav-dot" data-index="3"></button>
+      <button class="nav-dot" data-index="4"></button>
+      <button class="nav-dot" data-index="5"></button>
+      <button class="nav-dot" data-index="6"></button>
+      <button class="nav-dot" data-index="7"></button>
+      <button class="nav-dot" data-index="8"></button>
+    </div>
+  </div>
+
+  <script>
+    VANTA.HALO({
+      el: "#halo",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      baseColor: 0x0,
+      backgroundColor: 0x0,
+      size: 1.2
+    });
+
+    new Carousel({
+      trackSelector: '.carousel-track',
+      cardSelector: '.service-card',
+      dotSelector: '.nav-dot',
+      prevBtnId: 'prevBtn',
+      nextBtnId: 'nextBtn',
+      containerId: 'carousel',
+      soundId: 'slideSound',
+      axis: 'y'
+    });
+  </script>
+</body>
+</html>

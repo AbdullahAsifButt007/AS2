@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Shorts - Why Here</title>
+  <link rel="shortcut icon" href="Favicon.png" type="image/png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/r134.js"></script>
+  <script src="js/rings.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/nav.js" defer></script>
+  <style>
+    body {
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .gradient-text {
+      font-size: 6vw;
+    }
+    .subtitle {
+      font-size: 1.5vw;
+    }
+  </style>
+</head>
+<body>
+  <a id="prevPg" href="index.html">prev</a>
+  <div id="rings"></div>
+  <div class="brand-logo">
+    <img src="Animation Shorts Logo for web.png" alt="Logo">
+  </div>
+  <div class="menu-toggle" id="menu-toggle">
+    <label id="bubble-label">
+      <input class="bubble" type="checkbox" id="menu-checkbox" name="dummy" value="on">
+      <span class="hamburger-icon"></span>
+    </label>
+  </div>
+  <div class="social_links">
+        <a href="https://www.instagram.com/animation_shorts1/" target="_blank">
+        <span class="fa-stack fa-lg ig combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+        <a href="https://www.facebook.com/animationshorts.co.uk/" target="_blank">
+        <span class="fa-stack fa-lg fb combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+        <a href="https://youtube.com/channel/UCKpNv2y8CS-G0z7Ar-LCGEg/" target="_blank">
+        <span class="fa-stack fa-lg yt combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-youtube-play fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+    </div>
+  <!-- Navigation Panel -->
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html" data-text="Home">Home</a></li>
+      <li><a href="why-here.html" data-text="About">About Us</a></li>
+      <li><a href="logo.html" data-text="Logos">Logos</a></li>
+      <li><a href="videos.html" data-text="Videos">Videos</a></li>
+      <li><a href="websites.html" data-text="Websites">Websites</a></li>
+      <li><a href="services.html" data-text="Services">Services</a></li>
+      <li><a href="pricing.html" data-text="Pricing">Pricing</a></li>
+      <li><a href="reviews.html" data-text="Reviews">Reviews</a></li>
+      <li><a href="team.html" data-text="Team">Team</a></li>
+      <li><a href="contact.html" data-text="Contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="title-container">
+    <h1 class="gradient-text">Why You Are Here?</h1>
+    <a class="subtitle" id="ot" href="logo.html" alt="Find"></a>
+  </div>
+
+  <audio id="bgMusic" loop>
+    <source src="characters/guitar.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <button class="audio-control" id="audioToggle">🔇</button>
+
+  <script>   
+    VANTA.RINGS({
+      el: "#rings",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 400.00,
+      minWidth: 400.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x0
+    });
+    
+    setupParallax('.title-container');
+    setupAudioControls('bgMusic', 'audioToggle');
+  </script>
+</body>
+</html>

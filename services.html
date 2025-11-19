@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Shorts - Services</title>
+  <link rel="shortcut icon" href="Favicon.png" type="image/png">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <script src="js/r134.js"></script>
+  <script src="js/net.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/nav.js" async></script>
+  <style>
+    .service-card {
+      width: 90vw;
+      height: 40vw;
+      max-width: 100vw;
+      max-height: 70vh;
+    }
+    .service-card.active {
+      transform: translateZ(250px);
+      box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.3);
+      border: 10px solid white;
+      background: black;
+    }
+    .service-card:hover {
+      transform: scale(1.5);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, rgba(0,0,0,0.7), transparent);
+    }
+    .nav-button.prev {
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .nav-button.next {
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (max-width: 768px) {
+      .service-content h2 {
+        font-size: 1.5rem;
+      }
+      .service-content p {
+        font-size: 0.9rem;
+      }
+      .nav-button {
+        padding: 0.5rem;
+      }
+      .nav-button i {
+        font-size: 1.5rem;
+      }
+    }
+    @media (max-width: 560px) {
+      .service-card{
+        height: 90vh;
+      }
+      .service-card.active {
+        border: 5px solid white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a id="prevPg" href="websites.html">prev</a>
+  <a id="nextPg" href="pricing.html">next</a>
+  <div id="net"></div>
+  <div class="brand-logo">
+    <img src="Animation Shorts Logo for web.png" alt="Logo">
+  </div>
+  <div class="menu-toggle" id="menu-toggle">
+    <label id="bubble-label">
+      <input class="bubble" type="checkbox" id="menu-checkbox" name="dummy" value="on">
+      <span class="hamburger-icon"></span>
+    </label>
+  </div>
+
+  <!-- Navigation Panel -->
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html" data-text="Home">Home</a></li>
+      <li><a href="why-here.html" data-text="About">About Us</a></li>
+      <li><a href="logo.html" data-text="Logos">Logos</a></li>
+      <li><a href="videos.html" data-text="Videos">Videos</a></li>
+      <li><a href="websites.html" data-text="Websites">Websites</a></li>
+      <li><a href="services.html" data-text="Services">Services</a></li>
+      <li><a href="pricing.html" data-text="Pricing">Pricing</a></li>
+      <li><a href="reviews.html" data-text="Reviews">Reviews</a></li>
+      <li><a href="team.html" data-text="Team">Team</a></li>
+      <li><a href="contact.html" data-text="Contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <audio id="slideSound" hidden>
+    <source src="slideSound.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="carousel-container relative" id="carousel">
+    <button class="nav-button prev" id="prevBtn">
+      <i class='bx bx-chevron-up'></i>
+    </button>
+    <button class="nav-button next" id="nextBtn">
+      <i class='bx bx-chevron-down'></i>
+    </button>
+
+    <div class="carousel-track absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex">
+      <!-- Web Development -->
+      <div class="service-card rounded-2xl p-8 flex flex-col align-top justify-center">
+        <div class="service-content relative text-center">
+          <i class='bx bx-code-alt text-7xl text-cyan-400 mb-8'></i>
+          <h2 class="text-4xl font-bold text-white mb-4">Web Development</h2>
+          <p class="text-gray-200 text-lg">Full-stack solutions for modern businesses</p>
+        </div>
+      </div>
+
+      <!-- Animation -->
+      <div class="service-card rounded-2xl p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <i class='bx bx-movie-play text-7xl text-purple-400 mb-8'></i>
+          <h2 class="text-4xl font-bold text-white mb-4">2D/3D Animation</h2>
+          <p class="text-gray-200 text-lg">Bringing stories to life through motion</p>
+        </div>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="service-card rounded-2xl p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <i class='bx bx-line-chart text-7xl text-emerald-400 mb-8'></i>
+          <h2 class="text-4xl font-bold text-white mb-4">Digital Marketing</h2>
+          <p class="text-gray-200 text-lg">Data-driven growth strategies</p>
+        </div>
+      </div>
+
+      <!-- Branding -->
+      <div class="service-card rounded-2xl p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <i class='bx bx-palette text-7xl text-amber-400 mb-8'></i>
+          <h2 class="text-4xl font-bold text-white mb-4">Branding</h2>
+          <p class="text-gray-200 text-lg">Crafting memorable brand identities</p>
+        </div>
+      </div>
+
+      <!-- Mobile Apps -->
+      <div class="service-card rounded-2xl p-8 flex flex-col justify-center">
+        <div class="service-content relative text-center">
+          <i class='bx bx-mobile-alt text-7xl text-rose-400 mb-8'></i>
+          <h2 class="text-4xl font-bold text-white mb-4">Mobile Apps</h2>
+          <p class="text-gray-200 text-lg">Native & cross-platform solutions</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vertical Navigation Dots -->
+    <div class="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3">
+      <button class="nav-dot" data-index="0"></button>
+      <button class="nav-dot" data-index="1"></button>
+      <button class="nav-dot" data-index="2"></button>
+      <button class="nav-dot" data-index="3"></button>
+      <button class="nav-dot" data-index="4"></button>
+    </div>
+  </div>
+
+  <script>
+    VANTA.NET({
+      el: "#net",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      backgroundColor: 0x0,
+      color: 0xffffff,
+      spacing: 20.00,
+      maxDistance: 20,
+      points: 20
+    });
+
+    new Carousel({
+      trackSelector: '.carousel-track',
+      cardSelector: '.service-card',
+      dotSelector: '.nav-dot',
+      prevBtnId: 'prevBtn',
+      nextBtnId: 'nextBtn',
+      containerId: 'carousel',
+      soundId: 'slideSound',
+      axis: 'x'
+    });
+  </script>
+</body>
+</html>

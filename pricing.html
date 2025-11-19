@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animation Shorts - Pricing</title>
+  <link rel="shortcut icon" href="Favicon.png" type="image/png">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/r134.js"></script>
+  <script src="js/dot.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/pricing.js" async></script>
+  <script src="js/nav.js" defer></script>
+  <style>
+    body {
+      overflow: hidden;
+      height: 100vh;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+    }
+    .gradient-text {
+      font-size: 5.5vw;
+    }
+    .subtitle {
+      font-size: 1.5vw;
+    }
+  </style>
+</head>
+<body>
+  <a id="prevPg" href="services.html">prev</a>
+  <a id="nextPg" href="reviews.html">next</a>
+  <div id="dots"></div>
+  <div class="brand-logo">
+    <img src="Animation Shorts Logo for web.png" alt="Logo">
+  </div>
+  <div class="menu-toggle" id="menu-toggle">
+    <label id="bubble-label">
+      <input class="bubble" type="checkbox" id="menu-checkbox" name="dummy" value="on">
+      <span class="hamburger-icon"></span>
+    </label>
+  </div>
+  <div class="social_links">
+        <a href="https://www.instagram.com/animation_shorts1/" target="_blank">
+        <span class="fa-stack fa-lg ig combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-instagram fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+        <a href="https://www.facebook.com/animationshorts.co.uk/" target="_blank">
+        <span class="fa-stack fa-lg fb combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+        <a href="https://youtube.com/channel/UCKpNv2y8CS-G0z7Ar-LCGEg/" target="_blank">
+        <span class="fa-stack fa-lg yt combo">
+            <i class="fa fa-circle fa-stack-2x circle"></i>
+            <i class="fa fa-youtube-play fa-stack-1x fa-inverse icon"></i>
+        </span>
+        </a>
+    </div>
+  <!-- Navigation Panel -->
+  <nav class="nav" id="nav">
+    <ul>
+      <li><a href="index.html" data-text="Home">Home</a></li>
+      <li><a href="why-here.html" data-text="About">About Us</a></li>
+      <li><a href="logo.html" data-text="Logos">Logos</a></li>
+      <li><a href="videos.html" data-text="Videos">Videos</a></li>
+      <li><a href="websites.html" data-text="Websites">Websites</a></li>
+      <li><a href="services.html" data-text="Services">Services</a></li>
+      <li><a href="pricing.html" data-text="Pricing">Pricing</a></li>
+	  <li><a href="reviews.html" data-text="Reviews">Reviews</a></li>
+      <li><a href="team.html" data-text="Team">Team</a></li>
+      <li><a href="contact.html" data-text="Contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div>
+	<div class="title-container">
+    <h1 class="gradient-text">Pricing</h1>
+  </div>
+  <br><br>
+    <!-- CALCULATOR BOX -->		
+    <div class="calc-box">
+				<!-- Open Buttons -->
+				<div id="calbtn">
+					<button class="open-btn" id="open-calculator" alt="Website Costing"></button>
+					<button class="open-btn" id="open-video-calculator" alt="Video Costing"></button>
+				</div>
+				<!-- ONE Overlay -->
+				<div class="overlay-3" id="calculator-overlay">
+					<!-- WEBSITE CALCULATOR -->
+					<div class="calculator-container website-calc" id="website-calculator" style="display:none;">
+						<button class="close-btn">✕</button>
+						<h1>Website Cost Calculator</h1>
+						<!-- Website calculator content here -->
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="packages-container">
+									<button class="package-btn" data-package="bronze">Bronze</button>
+									<button class="package-btn" data-package="silver">Silver</button>
+									<button class="package-btn" data-package="gold">Gold</button>
+									<button class="package-btn" data-package="platinum">Platinum</button>
+								</div>
+								<div class="buttons-container">
+									<button class="service-btn" data-price="100" data-id="1">Domain</button>
+									<button class="service-btn" data-price="100" data-id="2">Hosting</button>
+									<button class="service-btn" data-price="50" data-id="3">Email</button>
+									<button class="service-btn" data-price="150" data-id="4">SSL</button>
+									<button class="service-btn" data-price="50" data-id="5">Revision</button>
+									<button class="service-btn" data-price="100" data-id="6">Animations/Transitions</button>
+									<button class="service-btn" data-price="50" data-id="7">UI</button>
+									<button class="service-btn" data-price="50" data-id="8">Mobile Responsiveness</button>
+									<button class="service-btn" data-price="250" data-id="9">API's Integrations</button>
+									<button class="service-btn" data-price="150" data-id="10">Maintainance/Upgradations</button>
+									<button class="service-btn" data-price="100" data-id="11">Web Forms</button>
+									<button class="service-btn" data-price="100" data-id="12">Google Analytics Setup</button>
+									<button class="service-btn" data-price="150" data-id="13">Blog Page</button>
+									<button class="service-btn" data-price="150" data-id="14">Image Gallery/Slideshow</button>
+								</div>
+								<div class="action-buttons">
+									<button class="action-btn" id="toggle-select">Select All</button>
+								</div>
+							</div>
+							<div id="gut" class="col-lg-6">
+								<ul id="selected-services"></ul>
+								<p class="total">Total: £<span id="total">0</span></p>
+							</div>
+						</div>
+					</div>
+					<!-- VIDEO CALCULATOR -->
+					<div class="calculator-container video-calc" id="video-calculator" style="display:none;">
+						<button class="close-btn">✕</button>
+						<div class="video-calculator-box">
+							<h1>Video Price Calculator</h1>
+							<!-- Mode Selector -->
+							<label>Choose Mode</label>
+							<div class="mode-buttons">
+								<button id="btnCustom" class="active">Custom</button>
+								<button id="btnPackage">Packages</button>
+							</div>
+							<!-- Package Options -->
+							<div class="package-buttons" style="display: none;">
+								<button id="bronze">Bronze</button>
+								<button id="silver">Silver</button>
+								<button id="gold">Gold</button>
+							</div>
+							<label>Type of Video</label>
+							<div class="video-type-buttons">
+								<button id="btn2d">2D</button>
+								<button id="btn3d">3D</button>
+							</div>
+							<label>No. of Characters</label>
+							<input type="number" id="characters" value="0" min="0" disabled>
+							<label>No. of Vans</label>
+							<input type="number" id="vans" value="0" min="0" disabled>
+							<label>No. of Voiceovers</label>
+							<input type="number" id="voiceovers" value="0" min="0" disabled>
+							<label>Video Length (Seconds)</label>
+							<div class="slider-container">
+								<input type="range" id="seconds" min="30" max="180" value="30" step="1" disabled>
+								<div class="seconds-display">30 seconds</div>
+							</div>
+							<div class="result" id="video-total">Please select video type</div>
+						</div>
+					</div>
+				</div>
+    </div>
+  </div>
+  <script>   
+    VANTA.DOTS({
+        el: "#dots",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: true,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0x0,
+        size: 4.00,
+        showLines: false
+    })
+    
+    setupParallax('.title-container');
+  </script>
+</body>
+</html>
